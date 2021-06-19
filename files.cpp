@@ -55,7 +55,8 @@ void file(){
         if(i > loopMax){
             ofstream file;
             file.open (std::to_string(i) + ".txt");
-            cin >> input;
+            cin.ingore();
+            getline(cin, input);
             input = caesarscipher(input, 7);
             file << input << endl;
             file.close();
